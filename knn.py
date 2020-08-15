@@ -3,7 +3,7 @@ import math
 
 class KNN:
     """
-    K-neariest-neighbor classifier using L1 loss
+    K-neariest-neighbor classifier
     """
     def __init__(self, k=1):
         self.k = k
@@ -66,13 +66,6 @@ class KNN:
         dists, np array (num_test_samples, num_train_samples) - array
            with distances between each test and each train sample
         '''
-        """num_train = self.train_X.shape[0]
-        num_test = X.shape[0]
-        dists = np.zeros((num_test, num_train), np.float32)
-        for i_test in range(num_test):
-            kek = np.tile(X[i_test], num_train).reshape(num_train, -1)
-            dists[i_test] = np.sum(np.abs(kek - self.train_X), axis = 1)
-        return dists"""
 
         num_train = self.train_X.shape[0]
         num_test = X.shape[0]
